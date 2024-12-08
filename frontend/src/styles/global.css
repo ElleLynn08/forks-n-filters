@@ -1,0 +1,42 @@
+/* Colors */
+:root {
+    --main-orange: #b96943; /* Warm orange */
+    --tan-bg: #fde8d5; /* Light tan */
+    --text-dark: #333; /* Dark text */
+  }
+  
+  /* Fonts */
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--tan-bg);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-family: 'Chelsea Market', cursive; /* Headers */
+  }
+  
+  button {
+    font-family: 'Hachi Maru Pop', cursive; /* Shared button font */
+    background-color: var(--main-orange);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: rgb(34, 160, 179); /* Hover color */
+  }
+  
+  /* Utility Classes */
+  .text-center {
+    text-align: center;
+  }
+  
+  

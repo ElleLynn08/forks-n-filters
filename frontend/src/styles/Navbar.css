@@ -1,53 +1,75 @@
 .navbar {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
   padding: 10px 20px;
-  background-color: rgb(185, 105, 67);
-  color: white;
-  font-family: 'Arial', sans-serif;
+  background-color: var(--main-orange);
+  height: 150px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .logo {
-  display: flex;
-  align-items: center;
+  height: 150px; /* Resize for proportion */
+  width: auto;
 }
 
-.logo img {
-  width: 40px;
-  margin-right: 10px;
+.logo-title {
+  display: flex;
+  flex-direction: column; /* Stacks the text vertically */
+  font-family: 'Chelsea Market', cursive;
+  font-size: 1.5rem; /* Adjusted for better fit */
+  color: white;
+  line-height: 1.2; /* Space between lines */
+  text-align: left; /* Align text to the left */
 }
 
 .nav-links {
-  display: flex;
-  gap: 20px;
   list-style: none;
+  display: flex;
+  justify-content: center; /* Center the links horizontally */
+  gap: 2rem;
+  margin: 0;
 }
 
 .nav-links li {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #024B62;
   cursor: pointer;
 }
 
 .search-bar {
   display: flex;
-  gap: 5px;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.search-bar input {
-  border: none;
-  border-radius: 20px;
-  padding: 5px 10px;
-  outline: none;
+.search-bar input[type="text"] {
+  font-family: 'Poppins', sans-serif;
+  padding: 0.5rem;
+  border: 1px solid var(--text-dark);
+  border-radius: 5px;
 }
 
 .search-bar button {
+  font-family: 'Hachi Maru Pop', cursive;
+  background-color: var(--tan-bg);
+  color: rgb(7, 7, 7);
   border: none;
-  background-color: white;
-  color: rgb(185, 105, 67);
-  border-radius: 20px;
-  padding: 5px 15px;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
+.search-bar button:hover {
+  background-color: rgb(34, 160, 179);
+  color: #ffffff;
+}
 
-  

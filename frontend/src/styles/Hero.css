@@ -1,42 +1,26 @@
 .hero {
-  background-color: rgb(255, 241, 230);
   text-align: center;
-  padding: 50px 20px;
-  color: rgb(185, 105, 67);
-  font-family: 'Arial', sans-serif;
+  padding: 2rem 0;
 }
 
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-
-.hero-search {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-
-.hero-search input {
-  padding: 10px;
-  border-radius: 20px;
-  border: 1px solid rgb(185, 105, 67);
-  outline: none;
-}
-
-.hero-search button {
-  background-color: rgb(185, 105, 67);
+.hero button {
+  background-color: var(--main-orange);
   color: white;
   border: none;
-  padding: 10px 20px;
-  border-radius: 20px;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1.2rem;
   cursor: pointer;
+  font-family: 'Hachi Maru Pop', cursive;
+  transition: background-color 0.3s ease;
 }
+
+.hero button:hover {
+  background-color: rgb(34, 160, 179); /* Hover color */
+}
+
+
+
 
 
   

@@ -1,8 +1,11 @@
 import React from 'react';
-import './styles/layout.css';
+import './styles/global.css';
+import './styles/navbar.css';
+import './styles/hero.css';
+
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-
+import "@fontsource/poppins";
 
 function App() {
   return (
