@@ -8,7 +8,9 @@ seamlessly in both local and containerized environments.
 
 from flask import Flask
 from flask_cors import CORS
-from routes.recipe_routes import recipe_blueprint
+from .routes.recipe_routes import recipe_blueprint
+
+
 
 # Initialize the Flask application
 app = Flask(__name__)
@@ -34,3 +36,4 @@ if __name__ == '__main__':
     # Run the Flask app in debug mode for development purposes
     # Use the 0.0.0.0 host to allow connections from Docker and external devices
     app.run(host='0.0.0.0', port=5000, debug=True)
+    

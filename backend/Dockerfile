@@ -4,6 +4,9 @@ FROM python:3.11
 # Set the working directory in the container
 WORKDIR /app
 
+# Set the PYTHONPATH environment variable
+ENV PYTHONPATH=/app
+
 # Copy the requirements.txt file into the container
 COPY requirements.txt .
 
@@ -18,6 +21,8 @@ EXPOSE 5000
 
 # Set the default command for the container to run the Flask app
 CMD ["flask", "run", "--host=0.0.0.0"]
+
+
 
 
 

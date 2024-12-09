@@ -1,6 +1,8 @@
+version: "3.9"
+
 services:
   backend:
-    build: ./backend  # Build the backend from the Dockerfile in the backend directory
+    build: ./backend
     container_name: backend
     working_dir: /app
     volumes:
@@ -10,21 +12,16 @@ services:
     environment:
       - FLASK_APP=app.py
       - FLASK_ENV=development
+      - PYTHONPATH=/app  # This is crucial for module imports
     command: flask run --host=0.0.0.0
-    healthcheck: 
-      disable: true  
 
-  frontend:
-    image: node:18
-    container_name: frontend
-    working_dir: /app
-    volumes:
-      - ./frontend:/app
-    ports:
-      - "3003:3000"
-    command: npm start
-    healthcheck: 
-      disable: true
+
+
+
+
+
+    
+
 
 
 
