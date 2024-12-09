@@ -1,0 +1,118 @@
+/* General layout */
+.recipe-details-page {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Two columns: image & description, and details */
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Recipe card: Image and description */
+.recipe-card {
+  background-color: rgb(34, 160, 179); /* Vibrant card color */
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.recipe-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.recipe-title {
+  color: #024B62; /* Custom color for the food name */
+  font-family: 'Chelsea Market', cursive;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.recipe-description {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+/* Recipe details card */
+.recipe-details-card {
+  background-color: rgb(34, 160, 179); /* Vibrant card color */
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  overflow: hidden;
+}
+
+.recipe-details-card h2 {
+  font-family: 'Chelsea Market', cursive;
+  margin-bottom: 15px;
+}
+
+.recipe-details-card ul {
+  list-style: none;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 20px;
+}
+
+.recipe-details-card ul li {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+.recipe-details-card h3 {
+  font-family: 'Chelsea Market', cursive;
+  margin-top: 20px;
+}
+
+.recipe-details-card p {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+}
+
+/* Nutrition card */
+.nutrition-card {
+  grid-column: span 2; /* Nutrition spans the width below other sections */
+  background-color: rgb(34, 160, 179);
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  overflow: hidden;
+}
+
+.nutrition-card h2 {
+  font-family: 'Chelsea Market', cursive;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.nutrition-card ul {
+  list-style: none;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.nutrition-card ul li {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+/* Responsiveness for smaller screens */
+@media (max-width: 768px) {
+  .recipe-details-page {
+    grid-template-columns: 1fr; /* Stack all sections vertically */
+  }
+
+  .nutrition-card {
+    grid-column: span 1; /* Take up full width on smaller screens */
+  }
+}
+

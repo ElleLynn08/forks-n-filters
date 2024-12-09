@@ -1,0 +1,80 @@
+/* General Styling for About Page */
+.about-page {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--tan-bg); /* Matches the site theme */
+  }
+  
+  .about-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .about-logo {
+    border-radius: 10px;
+    width: 150px; /* Adjust size */
+    margin-bottom: 1rem;
+  }
+  
+  .about-title {
+    font-size: 3rem;
+    color: #024B62; /* Matches the theme */
+    font-family: "Chelsea Market", cursive;
+  }
+  
+  .about-description {
+    font-size: 1.5rem;
+    color: #024B62; /* Matches text color */
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+  }
+  
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .decorative-image {
+    width: 300px; /* Adjust size */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1rem;
+  }
+  
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Spacing between images */
+    margin-top: 2rem;
+  }
+  
+  .about-image {
+    width: 150px; /* Size of the decorative images */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .explore-button {
+    background-color: var(--main-orange);
+    color: white;
+    border: none;
+    padding: 2rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-family: "Hachi Maru Pop", cursive;
+    transition: background-color 0.3s ease;
+  }
+  
+  .explore-button:hover {
+    background-color: rgb(34, 160, 179); /* Matches hover theme */
+  }
+  
+  

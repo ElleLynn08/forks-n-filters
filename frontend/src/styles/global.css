@@ -1,42 +1,90 @@
-/* Colors */
 :root {
-    --main-orange: #b96943; /* Warm orange */
-    --tan-bg: #fde8d5; /* Light tan */
-    --text-dark: #333; /* Dark text */
+  --main-orange: #b96943; /* Warm orange */
+  --tan-bg: #D4AF85; /* Updated background color */
+  --card-bg: rgb(34, 160, 179); /* Updated card color */
+  --text-dark: #333; /* Dark text */
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--tan-bg);
+  color: var(--text-dark);
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-family: 'Chelsea Market', cursive; /* Use for headers */
+}
+
+button {
+  font-family: 'Hachi Maru Pop', cursive;
+  background-color: var(--main-orange);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: rgb(34, 160, 179); /* Hover color */
+}
+
+a {
+  text-decoration: none; /* Remove underline globally */
+  color: var(--text-dark); /* Default link color */
+}
+
+a:hover {
+  text-decoration: none;
+  color: #ffffff; /* Highlight link color on hover */
+}
+
+/* Adjust card layout for consistency */
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three cards per row */
+  gap: 20px; /* Space between cards */
+  justify-content: center; /* Center-align the grid */
+  padding: 20px;
+}
+
+.recipe-card {
+  background-color: rgb(34, 160, 179); /* Vibrant card color */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 200px; /* Ensure uniform height */
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.recipe-card a {
+  text-decoration: none;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+}
+
+.recipe-card:hover {
+  transform: scale(1.05); /* Zoom effect */
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .recipe-grid {
+    grid-template-columns: 1fr; /* Stack cards vertically on small screens */
   }
-  
-  /* Fonts */
-  body {
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--tan-bg);
-    color: var(--text-dark);
-    margin: 0;
-    padding: 0;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-    font-family: 'Chelsea Market', cursive; /* Headers */
-  }
-  
-  button {
-    font-family: 'Hachi Maru Pop', cursive; /* Shared button font */
-    background-color: var(--main-orange);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: rgb(34, 160, 179); /* Hover color */
-  }
-  
-  /* Utility Classes */
-  .text-center {
-    text-align: center;
-  }
-  
-  
+}
+
+
+ 

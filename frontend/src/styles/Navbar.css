@@ -14,6 +14,7 @@
 }
 
 .logo {
+  border-radius: 12px;
   height: 150px; /* Resize for proportion */
   width: auto;
 }
@@ -43,6 +44,18 @@
   color: #024B62;
   cursor: pointer;
 }
+.nav-links li a {
+  text-decoration: none;
+  color: #024B62;
+}
+
+.nav-links li a:hover {
+  color: white;
+}
+
+.nav-links li a:visited {
+  color: #024B62; /* Prevent purple color */
+}
 
 .search-bar {
   display: flex;
@@ -60,7 +73,7 @@
 .search-bar button {
   font-family: 'Hachi Maru Pop', cursive;
   background-color: var(--tan-bg);
-  color: rgb(7, 7, 7);
+  color: #024B62;
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 5px;
@@ -72,4 +85,3 @@
   background-color: rgb(34, 160, 179);
   color: #ffffff;
 }
-

@@ -3,20 +3,33 @@
   padding: 2rem 0;
 }
 
+.hero h1 {
+  font-size: 3rem; /* Larger font size for emphasis */
+  color: #024B62; /* Updated color */
+  margin-bottom: 1rem; /* Add space below the title */
+}
+
+.hero p {
+  font-size: 1.5rem; /* Increase paragraph font size */
+  color: #024B62; /* Updated color */
+  margin-bottom: 2rem; /* Add space below the paragraph */
+}
+
 .hero button {
-  background-color: var(--main-orange);
-  color: white;
+  background-color: var(--main-orange); /* Reverted back to orange */
+  color: white; /* Button text color */
   border: none;
-  padding: 0.8rem 1.5rem;
+  padding: 2rem 1.5rem;
   border-radius: 5px;
   font-size: 1.2rem;
   cursor: pointer;
   font-family: 'Hachi Maru Pop', cursive;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .hero button:hover {
-  background-color: rgb(34, 160, 179); /* Hover color */
+  background-color: rgb(34, 160, 179);
+  color: #ffffff;
 }
 
 
