@@ -33,33 +33,48 @@ jobs:
           --health-retries=5
 
     steps:
-      # Step 1: Checkout the repository
+      # Step 1: Checkout the code
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Step 2: Backend - Install dependencies and run checks
+      # Step 2: Install backend dependencies
       - name: Install backend dependencies
         run: |
           pip install -r backend/requirements.txt
+
+      # Step 3: Run backend tests
       - name: Run backend tests
         run: |
           pytest backend --maxfail=3 --disable-warnings || true  # Placeholder
 
-      # Step 3: Frontend - Install dependencies and run tests
+      # Step 4: Install frontend dependencies
       - name: Install frontend dependencies
         working-directory: frontend
         run: npm install
+
+      # Step 5: Run frontend tests
       - name: Run frontend tests
         working-directory: frontend
         run: npm test || true  # Placeholder
 
-      # Step 4: Debugging (if CI fails)
-      - name: Debug containers
+      # Step 6: Start containers interactively for debugging
+      - name: Start containers interactively
+        run: |
+          docker-compose up --build -d
+          docker ps -a
+          docker exec -it backend /bin/bash || true
+          docker exec -it frontend /bin/bash || true
+
+      # Step 7: Debug containers logs (if failure occurs)
+      - name: Debug containers logs
         if: failure()
         run: |
           docker ps -a
-          docker logs $(docker ps -aqf "name=backend")
           docker logs $(docker ps -aqf "name=frontend")
+          docker logs $(docker ps -aqf "name=backend")
+
+
+
 
 
 

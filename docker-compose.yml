@@ -1,10 +1,6 @@
-version: "3.8"
-
 services:
   backend:
-    build:
-      context: ./backend   # Points to the backend folder where the Dockerfile is located
-      dockerfile: Dockerfile  # Specifies the Dockerfile in the backend folder
+    build: ./backend  # Build the backend from the Dockerfile in the backend directory
     container_name: backend
     working_dir: /app
     volumes:
@@ -15,9 +11,11 @@ services:
       - FLASK_APP=app.py
       - FLASK_ENV=development
     command: flask run --host=0.0.0.0
+    healthcheck: 
+      disable: true  
 
   frontend:
-    image: node:18  # Use the official node image for the frontend
+    image: node:18
     container_name: frontend
     working_dir: /app
     volumes:
@@ -25,6 +23,10 @@ services:
     ports:
       - "3003:3000"
     command: npm start
+    healthcheck: 
+      disable: true
+
+
 
 
 
