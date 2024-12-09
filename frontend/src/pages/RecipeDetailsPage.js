@@ -60,7 +60,17 @@ function RecipeDetailsPage() {
           )}
         </ul>
         <h3>Instructions</h3>
-        <p>{recipe.instructions || "No instructions available."}</p>
+        {recipe.analyzedInstructions?.length > 0 ? (
+          <ol>
+            {recipe.analyzedInstructions[0].steps.map((step, index) => (
+              <li key={index}>{step.step}</li>
+            ))}
+          </ol>
+        ) : recipe.instructions ? (
+          <p>{recipe.instructions.replace(/<[^>]+>/g, "")}</p>
+        ) : (
+          <p>No instructions available.</p>
+        )}
       </div>
 
       {/* Nutrition Information Card */}
@@ -84,6 +94,7 @@ function RecipeDetailsPage() {
 }
 
 export default RecipeDetailsPage;
+
 
 
 
