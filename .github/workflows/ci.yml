@@ -14,7 +14,7 @@ jobs:
 
     services:
       backend:
-        image: python:3.12  # Updated to Python 3.12
+        image: python:3.11  # Use Python 3.11 in the container
         ports:
           - 5000:5000
         options: >-
@@ -34,7 +34,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: 3.12  # Ensure this matches your Python version
+          python-version: 3.11  # Ensure the runner environment uses Python 3.11
 
       - name: Install backend dependencies
         working-directory: backend
@@ -58,4 +58,6 @@ jobs:
       - name: Run frontend tests
         working-directory: frontend
         run: npm test
+
+
 
