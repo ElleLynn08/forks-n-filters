@@ -73,6 +73,24 @@
   padding: 20px;
 }
 
+/* Center and style the "No recipes found" message */
+.no-recipes-message-container {
+  display: flex; /* Enable flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 60vh; /* Adjust height to fill most of the viewport */
+  text-align: center; /* Center text alignment inside the container */
+}
+
+.no-recipes-message {
+  font-size: 2.5rem; /* Larger font size for readability */
+  color: #024B62; /* Deep teal color */
+  font-family: "Poppins", sans-serif; /* Consistent font family */
+  font-weight: 600; /* Bold text for emphasis */
+  max-width: 80%; /* Optional: limit width for readability */
+}
+
+
 /* Media query for responsiveness */
 @media (max-width: 768px) {
   .recipe-card-container .recipe-grid {
@@ -81,6 +99,3 @@
 }
 
 
-
-
- 

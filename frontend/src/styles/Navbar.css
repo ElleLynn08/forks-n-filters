@@ -1,87 +1,141 @@
+/* General Navbar Styling */
 .navbar {
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
   padding: 10px 20px;
-  background-color: var(--main-orange);
-  height: 150px;
+  background-color: var(--main-orange); /* Background color for navbar */
 }
 
+/* Logo Container Styling */
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 15px; /* Space between logo and app name */
 }
 
 .logo {
-  border-radius: 12px;
-  height: 150px; /* Resize for proportion */
-  width: auto;
+  border-radius: 10px; /* Rounded edges for logo */
+  height: 150px; /* Logo size */
+  width: auto; /* Maintain aspect ratio */
 }
 
-.logo-title {
-  display: flex;
-  flex-direction: column; /* Stacks the text vertically */
-  font-family: 'Chelsea Market', cursive;
-  font-size: 1.5rem; /* Adjusted for better fit */
-  color: white;
-  line-height: 1.2; /* Space between lines */
-  text-align: left; /* Align text to the left */
+/* App Name Styling */
+.logo-container .app-name {
+  margin-left: 10px; /* Space between logo and app name */
+  font-family: "Chelsea Market", cursive; /* App title font */
+  font-size: 1.8rem; /* Slightly larger text size */
+  color: white; /* White color for the app name */
+  text-align: left; /* Align app name text to the left */
+  line-height: .2; /* Adjust spacing between lines */
 }
 
+/* Nav Links Styling */
 .nav-links {
-  list-style: none;
+  list-style: none; /* Remove bullet points */
   display: flex;
-  justify-content: center; /* Center the links horizontally */
-  gap: 2rem;
-  margin: 0;
+  justify-content: center; /* Center nav links */
+  gap: 1.5rem; /* Space between links */
+  margin: 0; /* Remove default margin */
 }
 
 .nav-links li {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #024B62;
-  cursor: pointer;
+  font-family: "Poppins", sans-serif; /* Font for links */
+  font-size: 1.2rem; /* Font size for links */
+  font-weight: bold; /* Bold text for links */
+  color: #024B62; /* Teal color for text */
+  cursor: pointer; /* Pointer cursor for hover effect */
 }
+
 .nav-links li a {
-  text-decoration: none;
-  color: #024B62;
+  text-decoration: none; /* Remove underline */
+  color: #024B62; /* Teal color for links */
 }
 
 .nav-links li a:hover {
-  color: white;
+  color: white; /* White hover effect for links */
 }
 
-.nav-links li a:visited {
-  color: #024B62; /* Prevent purple color */
-}
-
+/* Search Bar Styling */
 .search-bar {
-  display: flex;
+  display: flex; /* Flexbox for layout */
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.5rem; /* Space between input and button */
 }
 
 .search-bar input[type="text"] {
-  font-family: 'Poppins', sans-serif;
-  padding: 0.5rem;
-  border: 1px solid var(--text-dark);
-  border-radius: 5px;
+  font-family: "Poppins", sans-serif; /* Font for input */
+  padding: 0.3rem; /* Padding inside input box */
+  border: 1px solid #024B62; /* Teal border */
+  border-radius: 5px; /* Rounded input box */
+  background-color: #D4AF85; /* Beige background color */
+  color: #024B62; /* Teal text color */
+  font-size: 0.9rem; /* Font size for input */
+  width: 150px; /* Input width */
+}
+
+.search-bar input[type="text"]::placeholder {
+  color: #024B62; /* Teal placeholder text */
 }
 
 .search-bar button {
-  font-family: 'Hachi Maru Pop', cursive;
-  background-color: var(--tan-bg);
-  color: #024B62;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-family: "Hachi Maru Pop", cursive; /* Font for button */
+  background-color: rgb(34, 160, 179); /* Vibrant teal button */
+  color: white; /* White text color */
+  border: none; /* No border */
+  padding: 0.5rem 0.7rem; /* Padding for button */
+  border-radius: 5px; /* Rounded button */
+  font-size: 0.9rem; /* Font size for button */
+  cursor: pointer; /* Pointer cursor for hover effect */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
 }
 
 .search-bar button:hover {
-  background-color: rgb(34, 160, 179);
-  color: #ffffff;
+  background-color: #D4AF85; /* Beige hover effect */
+  color: #024B62; /* Teal text on hover */
 }
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .navbar {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto; /* Stack rows */
+    align-items: start;
+    padding: 1rem;
+  }
+
+  .logo-container {
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .logo-container .app-name {
+    display: none; /* Hide app name on smaller screens */
+  }
+
+  .nav-links {
+    display: flex; /* Flexbox for layout */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-wrap: wrap; /* Allow wrapping for small screens */
+    gap: 1rem; /* Space between links */
+    width: 100%; /* Take full width of the container */
+    padding: 0; /* Remove extra padding */
+    margin: 0; /* Reset margin */
+  }
+  
+
+  .search-bar {
+    flex-direction: row; /* Inline search bar */
+    justify-content: center;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .search-bar input,
+  .search-bar button {
+    font-size: 0.8rem; /* Adjust size for smaller screens */
+  }
+}
+
+

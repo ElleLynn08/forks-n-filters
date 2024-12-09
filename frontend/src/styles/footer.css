@@ -1,0 +1,47 @@
+/* Footer Styling */
+.footer {
+    background-color: var(--main-orange); /* Match navbar background */
+    color: white; /* White text color */
+    font-family: "Poppins", sans-serif; /* Match font family */
+    text-align: center; /* Center everything */
+    padding: 1.5rem; /* Add spacing around content */
+    margin-top: 2rem; /* Space above the footer */
+    border-top: none; /* Remove the dividing line for seamless look */
+  }
+  
+  /* Footer Text Animation */
+  .footer p {
+    font-size: 1.3rem; /* Slightly larger text size */
+    margin: 0; /* Remove default margin */
+    line-height: 1.6; /* Add nice spacing */
+    animation: fadeIn 2s ease; /* Apply fade-in animation */
+  }
+  
+  /* Keyframes for Text Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0; /* Start invisible */
+    }
+    to {
+      opacity: 1; /* Fade to visible */
+    }
+  }
+  
+  /* Chef Hat Styling */
+  .footer img.chef-hat {
+    border-radius: 10px;
+    margin-top: 0.8rem; /* Space above the image */
+    width: 45px; /* Adjust the size of the image */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    cursor: pointer; /* Indicate it's clickable */
+  }
+  
+  /* Chef Hat Hover Effect */
+  .footer img.chef-hat:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+  }
+  
+  
+  
+  
