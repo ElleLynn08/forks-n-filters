@@ -36,6 +36,14 @@ jobs:
         with:
           python-version: 3.11  # Ensure the runner environment uses Python 3.11
 
+      - name: Cache Python dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-python-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-python-
+
       - name: Install backend dependencies
         working-directory: backend
         run: |
@@ -58,6 +66,7 @@ jobs:
       - name: Run frontend tests
         working-directory: frontend
         run: npm test
+
 
 
 
