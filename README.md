@@ -1,55 +1,47 @@
 ## **Forks n' Filters**
-*A cloud-based recipe filter platform for personalized meal discovery.*
+*Created with 🧡 and a pinch of sweetness by Elle Lynn.*
 
 ---
 
 ### **About**
-Forks n' Filters is a fun and intuitive platform designed to help users find recipes tailored to their preferences. Whether you're looking for quick meals under 30 minutes, high-protein recipes for bodybuilders, or low-calorie options, this platform makes it easy to filter and discover recipes in seconds.  
+Forks n' Filters is a fun and intuitive platform designed to help users discover recipes tailored to their preferences. Whether you're looking for quick meals under 30 minutes, high-protein recipes, or low-calorie options, this app makes it easy to filter and explore delicious meals in seconds.
 
-This project leverages cloud technologies to efficiently handle data and ensure scalability for a wide range of user needs.
+This cloud-based platform leverages cutting-edge technologies to ensure scalability, speed, and an engaging user experience.
 
 ---
 
 ### **Features**
 - Filter recipes by:
-  - **Dietary preferences**: Vegan, vegetarian, keto, paleo, etc.
-  - **Ingredients**: Include or exclude specific ingredients.
+  - **Dietary preferences**: Vegan, keto, paleo, etc.
+  - **Ingredients**: Include or exclude specific items.
   - **Cuisine types**: Italian, Asian, and more.
-  - **Cooking time**: Recipes under 30 minutes or 45 minutes max.
-  - **Nutrition**: High-protein, lean protein, low-calorie options.
-- User-friendly interface for quick and seamless navigation.
-- Backed by a cloud infrastructure for scalability and efficiency.
+  - **Cooking time**: Under 30 or 45 minutes max.
+  - **Nutrition**: High-protein, low-calorie options.
+- User-friendly design with responsive navigation.
+- Seamless integration with Spoonacular API.
 
 ---
 
 ### **Technologies**
-- **Frontend:** React or HTML/CSS/JavaScript (TBD).  
-- **Backend:** Python (Flask or Django).  
-- **Cloud:** VMs, Docker, and other deployment tools.  
-- **API:** Spoonacular API for recipe data.  
+- **Frontend**: React (with responsive CSS).
+- **Backend**: Python (Flask) with RESTful API design.
+- **Cloud**: Virtual Machines (VMs), Docker containers.
+- **API**: Spoonacular API for recipe data.
+- **Version Control**: GitHub for collaborative development.
+
+---
+
+### **Architecture**
+The platform uses:
+1. **Frontend**: A React-based SPA (Single Page Application).
+2. **Backend**: Flask for API requests and processing.
+3. **Cloud Deployment**: Hosted on VMs with Dockerized components for scalability.
 
 ---
 
 ### **Setup Instructions**
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/forks-n-filters.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd forks-n-filters
-   ```
-3. Run the backend setup:
-   - Install Python dependencies:
-     ```bash
-     pip install -r requirements.txt
-     ```
+   git clone https://github.com/ElleLynn08/forks-n-filters.git
 
----
-
-### **To-Do List**
-- [ ] Finalize UI design and logo.  
-- [ ] Implement basic API calls.  
-- [ ] Set up the backend infrastructure.  
-- [ ] Integrate cloud-based deployment tools.  
 
